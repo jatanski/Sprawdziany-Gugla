@@ -2,6 +2,7 @@
 const addButton = document.getElementById('addNextAnwser');
 const sendButton = document.getElementById('submit');
 const startTestButton = document.getElementById('start');
+const questionInput = document.querySelector('#question');
 const h2 = document.querySelector('h2');
 const form = document.querySelector('form');
 const description = document.querySelector('.description');
@@ -34,11 +35,25 @@ const howManyQuestion = () => {
 //Funkcja dodawania pytania i odpowiedzi do pamięci
 const addToObiekt = (e) => {
    e.preventDefault();
+   if (!questionInput.value) {
+      alert("Musisz podać treść pytania!");
+      return
+   }
+   if (!goodAnswer.value) {
+      alert("Musisz wpisać treść odpowiedzi!");
+      return
+   }
+   const inputAnswerItems = document.querySelectorAll('.answer');
+   inputAnswerItems.forEach(el => {
+      if (!el.value) {
+         alert("Musisz wpisać treść dodatkowych wariantów!");
+         null.dummy
+      }
+   })
    const questionDiv = document.getElementById('question-box');
    const questionBox = new QuestionAndAnwser;
    questionBox.goodAnswer = goodAnswer.value;
    questionBox.question = questionDiv.children[1].value;
-   const inputAnswerItems = document.querySelectorAll('.answer');
    inputAnswerItems.forEach(el => questionBox.answers[questionBox.answers.length] = el.value);
    arrayOfQuestions[arrayOfQuestions.length] = questionBox;
    howManyQuestion();
@@ -154,7 +169,7 @@ const startTest = function (e) {
 const showResult = () => {
    instruction.remove();
    const percentResult = Math.floor((points / arrayOfQuestions.length) * 100);
-   percentResult >= 50 ? description.innerHTML = `Twój wynik to ${points}/${arrayOfQuestions.length}. Stanowi to ${percentResult}% całości. Gratuluję, zdałeś! Możesz iść na piwo!` : resultText.textContent = `Twój wynik to ${points} punktów na ${arrayOfQuestions.length} możliwych. Stanowi to ${percentResult}% całości. Przykro mi, nie zdałes. Chyba trzeba iść się uczyć do poprawki ;(`
+   percentResult >= 50 ? description.innerHTML = `Twój wynik to ${points}/${arrayOfQuestions.length}. Stanowi to ${percentResult}% całości. Gratuluję, zdałeś! Możesz iść na piwo!` : description.innerHTML = `Twój wynik to ${points} punktów na ${arrayOfQuestions.length} możliwych. Stanowi to ${percentResult}% całości. Przykro mi, nie zdałes. Chyba trzeba iść się uczyć do poprawki ;(`
 }
 
 //Funkcja kończąca test
