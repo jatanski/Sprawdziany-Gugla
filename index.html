@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Formularz google</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <div class="wrap">
+      <h1>Sprawdziany Gugla</h1>
+      <section class="for-teacher">
+         <p class="description">Dzień dobry! Na naszej stronie możesz przeprowadzić sprawdzian dla swoich uczniów, a
+            następnie wystawić im zasłużone pały.</p>
+         <p class="instruction"> <span>Instrukcja:</span> <br> 1. Wpisz swoje pytanie poniżej, a następnie
+            dodaj
+            poprawną
+            odpowiedź oraz pozostałe
+            warianty. <br> 2. Zatwierdź swoje pytanie przyciskiem "Zapisz pytanie". <br> 3. Gdy już wpiszesz
+            wszystkie pytania kliknij "Rozpocznij test" i zaproś ucznia do komputera. <br> 4. Kolejność pytań jak i
+            kolejność odpowiedzi zostanie przemieszana przez komputer, aby utrudnić ściąganie uczniom.</p>
+         <h2></h2>
+      </section>
+
+      <form class="add-question" action="">
+         <div class="box" id="question-box">
+            <legend class="legend">Wpisz pytanie:</legend>
+            <input type="text" id="question" class="question" placeholder="Tutaj wpisz pytanie">
+         </div>
+         <div class="box">
+            <legend class="legend">Podaj poprawną odpowiedź:</legend>
+            <input type="text" class="answer" id="goodAnswer" placeholder="Wpisz odpowiedź">
+         </div>
+         <div class="box another-variant">
+            <legend class="legend">Podaj inne warianty:</legend>
+            <input type="text" class="answer" id="answer" placeholder="Wpisz odpowiedź">
+         </div>
+         <button class="btn btn-primary" id="addNextAnwser">Dodaj kolejny wariant</button>
+         <input class="btn btn-danger btn-lg save-question" type="submit" id="submit" value="Zapisz pytanie">
+      </form>
+      <button class="btn btn-warning btn-lg start" id="start">Rozpocznij test</button>
+   </div>
+   <script src="QuestionAndAnswer.js"></script>
+   <script src="main.js"></script>
+</body>
+
+</html>

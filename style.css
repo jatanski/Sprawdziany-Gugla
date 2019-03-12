@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --color: #222;
+    --bgc: rgb(139, 196, 127);
+}
+
+body {
+    background-color: var(--bgc);
+}
+
+.wrap {
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--bgc);
+}
+
+h1 {
+    padding: 3vh;
+    text-align: center;
+    font-size: 2.8em;
+    font-weight: bold;
+    color: var(--color);
+}
+
+.description {
+    font-size: 1.4em;
+    text-align: center;
+    color: var(--color);
+}
+
+.instruction {
+    font-size: 1.2em;
+    line-height: 180%;
+    color: var(--color);
+}
+
+.instruction span {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+.add-question {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    text-align: center;
+}
+
+.legend {
+    padding: 1vh;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.answer,
+.question {
+    min-height: 5vh;
+    margin: 1vh;
+    padding: 1vh;
+    font-size: 1.2em;
+}
+
+button {
+    margin: 1vh;
+}
+
+.save-question {
+    margin: 5vh;
+}
+
+.start {
+    position: relative;
+    left: 50%;
+    transform: translateX(calc(-50% - 1vh));
+    font-size: 1.8em;
+}
+
+.form-check {
+    position: relative;
+    height: 8vh;
+}
+
+input[type="radio"] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translateY(-50%);
+    font-size: 1.4em;
+    margin-bottom: 0;
+}
+
+.btn-position {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
