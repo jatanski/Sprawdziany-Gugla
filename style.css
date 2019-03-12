@@ -89,6 +89,10 @@ button {
     font-size: 1.8em;
 }
 
+.test-section {
+    margin-left: 10vw;
+}
+
 .form-check {
     position: relative;
     height: 8vh;
@@ -103,10 +107,22 @@ input[type="radio"] {
 .label {
     position: absolute;
     top: 50%;
-    left: 6%;
+    left: 15%;
     transform: translateY(-50%);
     font-size: 1.4em;
     margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .label {
+        left: 8%
+    }
+}
+
+@media (min-width: 1024px) {
+    .label {
+        left: 6%
+    }
 }
 
 .btn-position {

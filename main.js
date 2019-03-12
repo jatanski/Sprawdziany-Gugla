@@ -107,7 +107,7 @@ const createButtonEnd = () => {
 const createTest = function () {
    const testSection = document.createElement('section');
    testSection.id = "testSection";
-   testSection.style.marginLeft = "10vh"
+   testSection.className = "test-section";
    document.body.appendChild(testSection);
    createQuestion();
    createButtonEnd();
